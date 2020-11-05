@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Exellent_Taste.Models.Menukaart>
+
+@{
+    ViewData["Title"] = "Menukaart Overzicht";
+}
+<div class="card mb-4">
+    <a class="card-header" asp-action="Create"><i class="fas fa-table mr-1"></i>Create New</a>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Naam)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Beschrijving)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Prijs)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Naam)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Beschrijving)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Prijs)
+                        </td>
+                        <td>
+                            @if (item.MenuSoort_id == 1)
+                            {   @:drank
+                            }
+                            else
+                            {   @:Voedsel   
+                            }
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

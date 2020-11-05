@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Exellent_Taste.Models.Bestellingen_Lijst>
+
+@{
+    ViewData["Title"] = "barman overzicht";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                tafel
+            </th>
+            <th>
+                Naam
+            </th>
+            <th>
+                geleverd
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.bestellingen.Tafel)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.menukaart.Naam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Geleverd)
+            </td>
+            <td>
+                @if (!item.Geleverd)
+                {
+                    <a asp-action="geleverd" asp-route-id="@item.ID">lever</a>
+                }
+
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Index"  asp-controller="Bestellings" >Back to List</a>
+</div>

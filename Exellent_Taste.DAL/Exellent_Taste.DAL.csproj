@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200331095355_Initial1.cs" />
+    <Compile Remove="Migrations\20200331095355_Initial1.Designer.cs" />
+    <Compile Remove="Migrations\20200331095506_Initial.cs" />
+    <Compile Remove="Migrations\20200331095506_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200331095755_cmenusoort.cs" />
+    <Compile Remove="Migrations\20200331095755_cmenusoort.Designer.cs" />
+    <Compile Remove="Migrations\20200331100053_menusoortfornkey.cs" />
+    <Compile Remove="Migrations\20200331100053_menusoortfornkey.Designer.cs" />
+    <Compile Remove="Migrations\20200331100218_Initial.cs" />
+    <Compile Remove="Migrations\20200331100218_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200331100620_Initial.cs" />
+    <Compile Remove="Migrations\20200331100620_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200331100945_Initial.cs" />
+    <Compile Remove="Migrations\20200331100945_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200331101607_Initial.cs" />
+    <Compile Remove="Migrations\20200331101607_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200331101633_Initial.cs" />
+    <Compile Remove="Migrations\20200331101633_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200331111734_Initial.cs" />
+    <Compile Remove="Migrations\20200331111734_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200404194207_menu.cs" />
+    <Compile Remove="Migrations\20200404194207_menu.Designer.cs" />
+    <Compile Remove="Migrations\20200405125757_inisla.cs" />
+    <Compile Remove="Migrations\20200405125757_inisla.Designer.cs" />
+    <Compile Remove="Migrations\20200405131728_initial.cs" />
+    <Compile Remove="Migrations\20200405131728_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405132808_initial.cs" />
+    <Compile Remove="Migrations\20200405132808_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405133402_initial.cs" />
+    <Compile Remove="Migrations\20200405133402_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405134108_initial.cs" />
+    <Compile Remove="Migrations\20200405134108_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405142036_initial.cs" />
+    <Compile Remove="Migrations\20200405142036_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405144208_initial.cs" />
+    <Compile Remove="Migrations\20200405144208_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405144714_initial.cs" />
+    <Compile Remove="Migrations\20200405144714_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405145453_initial.cs" />
+    <Compile Remove="Migrations\20200405145453_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405150047_initial.cs" />
+    <Compile Remove="Migrations\20200405150047_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405150738_initial.cs" />
+    <Compile Remove="Migrations\20200405150738_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405151216_initial.cs" />
+    <Compile Remove="Migrations\20200405151216_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200405151628_initial.cs" />
+    <Compile Remove="Migrations\20200405151628_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200406145739_Adress.cs" />
+    <Compile Remove="Migrations\20200406145739_Adress.Designer.cs" />
+    <Compile Remove="Migrations\20200406150508_Adress.cs" />
+    <Compile Remove="Migrations\20200406150508_Adress.Designer.cs" />
+    <Compile Remove="Migrations\20200406150654_Adress-rel.cs" />
+    <Compile Remove="Migrations\20200406150654_Adress-rel.Designer.cs" />
+    <Compile Remove="Migrations\20200406150759_resevering-rel.cs" />
+    <Compile Remove="Migrations\20200406150759_resevering-rel.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exellent_Taste.Models\Exellent_Taste.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Exellent_Taste.Models.Reseveringen>
+
+@{
+    ViewData["Title"] = "Overzicht reseveringen";
+}
+
+    <div class="card mb-4">
+        <a class="card-header" asp-action="Create"><i class="fas fa-table mr-1"></i>Create New</a>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Voornaam)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Achternaam)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Telefoonnummer)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Aantal_Personen)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Datum)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Tijd)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Gekomen)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Voornaam)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Achternaam)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Telefoonnummer)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Aantal_Personen)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Datum)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tijd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Gekomen)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                                <a asp-action="Bestelling" asp-route-_id="@item.Bestelling_id" asp-route-_Resevering="@item.ID" asp-route-_Tafel="@item.Tafel"  >Bestelling</a> |
+                                <a  asp-action="DeleteConfirmed" asp-controller="Resevering" asp-route-id="@item.ID"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

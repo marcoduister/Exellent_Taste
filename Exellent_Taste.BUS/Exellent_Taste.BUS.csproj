@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exellent_Taste.DAL\Exellent_Taste.DAL.csproj" />
+    <ProjectReference Include="..\Exellent_Taste.Models\Exellent_Taste.Models.csproj" />
+  </ItemGroup>
+
+</Project>
